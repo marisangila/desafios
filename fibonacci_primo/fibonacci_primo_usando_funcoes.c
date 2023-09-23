@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int ehPrimo(int candidato)
+int eh_primo(int candidato)
 {
     for(int i=2;i<candidato/2;i++)
         if(candidato % i == 0)
@@ -16,7 +16,7 @@ int fibonacci(int *fib1, int *fib2)
 }
 int main()
 {
-    int n, fib1, fib2, fibAtual;
+    int n, fib1, fib2, fib_atual;
     fib1 = fib2 = 1;
     printf("Digite um numero:\n");
     scanf("%d", &n);
@@ -24,11 +24,11 @@ int main()
     printf("%d eh primo!\n", fib2);
     for(int i=1;i<n;i++)
     {
-        fibAtual = fibonacci(&fib1,&fib2);
-        if(ehPrimo(fibAtual) == 1)
-            printf("%d eh primo!\n", fibAtual);
+        fib_atual = fibonacci(&fib1,&fib2);
+        if(eh_primo(fib_atual) == 1)
+            printf("%d eh primo!\n", fib_atual);
         else
-            printf("%d nao eh primo!\n", fibAtual);
+            printf("%d nao eh primo!\n", fib_atual);
     }
     return 0;
 }
